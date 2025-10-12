@@ -1,6 +1,10 @@
 [build]
   command = "npm run build"
-  publish = ".next"
+  publish = "out"      # static export folder (or .next if using plugin for SSR)
+  functions = "functions"
 
 [build.environment]
   NODE_VERSION = "18"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

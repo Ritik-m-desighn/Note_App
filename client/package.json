@@ -15,6 +15,7 @@
     "react-hot-toast": "^2.6.0"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.13.5",
     "@tailwindcss/postcss": "^4",
     "tailwindcss": "^4"
   }
