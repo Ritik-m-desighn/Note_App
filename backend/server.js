@@ -11,10 +11,7 @@ const app = express();
 
 // Enable CORS
 app.use(cors({
-  origin: [
-    "http://localhost:3000",                 // for local dev
-    "https://mineworklist.netlify.app/"    // your actual Netlify URL 
-  ],
+  origin: "https://mineworklist.netlify.app", // no /login or path
   credentials: true,
 }));
 
