@@ -1,12 +1,7 @@
 [build]
-  # 1. Set the base directory where the client/ folder is located
-  base = "client"
-  
-  # 2. The build command runs inside the 'client' folder
   command = "npm run build"
-  
-[build.environment]
-  NODE_VERSION = "18"
+  publish = ".next"
+  base = "frontend"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
