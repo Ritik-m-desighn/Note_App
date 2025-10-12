@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api",
+  baseURL: process.env.NEXT_PUBLIC_API_URL || "https://note-app-3bnq.onrender.com",
 });
 
 // if i had used cookie  pareser in backend then in cookie section of browser contains the token dont need to send token inn each route as a requuest and then backend verify 
