@@ -1,8 +1,17 @@
 [build]
+  # 1. Set the base directory to the 'client' folder where package.json lives
+  base = "client"
+  
+  # 2. The build command
   command = "npm run build"
+  
+  # 3. Explicitly set the publish directory to the repository root (/)
+  #    to override the conflicting UI value and let the plugin manage output.
+  publish = "/" 
 
 [build.environment]
   NODE_VERSION = "18"
 
 [[plugins]]
+  # 4. The essential Next.js plugin
   package = "@netlify/plugin-nextjs"
