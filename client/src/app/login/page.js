@@ -46,10 +46,9 @@ export default function LoginPage() {
       }, 500); 
 
     } catch (err) {
-      toast.error(err.response?.data?.message || "Login failed. Check your credentials.");
-    } finally {
-      setIsLoading(false);
-    }
+  console.error("Login error:", err);
+  toast.error(err.response?.data?.message || "Login failed. Check console.");
+}
   };
 
   return (
