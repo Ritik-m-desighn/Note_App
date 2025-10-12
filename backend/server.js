@@ -13,7 +13,7 @@ const app = express();
 app.use(cors({
   origin: [
     "http://localhost:3000",                 // for local dev
-    "https://myremainingwork.netlify.app"    // your actual Netlify URL
+    "https://mineworklist.netlify.app/"    // your actual Netlify URL 
   ],
   credentials: true,
 }));
