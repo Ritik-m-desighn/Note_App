@@ -20,7 +20,7 @@ export default function NotesDashboard() {
       if (!token) {
         throw new Error("No authentication token found.");
       }
-      const res = await api.get("/notes");
+      const res = await api.get("/api/notes");
       setNotes(res.data);
     } catch (error) {
       toast.error("Session expired or unauthorized. Please log in again.");
@@ -39,11 +39,11 @@ export default function NotesDashboard() {
   const handleSave = async (note) => {
     try {
       if (note._id) {
-        const res = await api.put(`/notes/${note._id}`, note);
+        const res = await api.put(`/api/notes/${note._id}`, note);
         setNotes(notes.map((n) => (n._id === note._id ? res.data : n)));
         toast.success("Note updated successfully!");
       } else {
-        const res = await api.post("/notes", note);
+        const res = await api.post("/api/notes", note);
         setNotes([res.data, ...notes]);
         toast.success("New note added!");
       }
@@ -58,7 +58,7 @@ export default function NotesDashboard() {
     if (!isConfirmed) return;
 
     try {
-      await api.delete(`/notes/${id}`);
+      await api.delete(`/api/notes/${id}`);
       setNotes(notes.filter((n) => n._id !== id));
       toast.success("Note deleted.");
     } catch (err) {

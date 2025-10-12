@@ -11,7 +11,7 @@ const app = express();
 
 // Enable CORS
 app.use(cors({
-  origin: "http://localhost:3000",  // frontend URL
+  origin: "myworkl.netlify.app",  // frontend URL
   credentials: true,
 }));
 
