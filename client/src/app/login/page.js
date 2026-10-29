@@ -46,7 +46,7 @@ export default function LoginPage() {
       }, 500); 
 
     } catch (err) {
-  console.error("Login error:", err);
+  console.error("kuch gadbad hai", err);
   toast.error(err.response?.data?.message || "Login failed. Check console.");
 }
   };
